@@ -4,10 +4,21 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "pub": "envision deploy ./dist -k app-template -v 0.0.1"
   },
   "keywords": [],
   "author": "abearxiong <xiongxiao@xiongxiao.me>",
   "license": "MIT",
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "dayjs": "^1.11.13",
+    "lodash-es": "^4.17.21"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-basic-ssl": "^1.2.0",
+    "vite": "^6.0.6"
+  }
 }

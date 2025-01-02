@@ -17,6 +17,13 @@ export default defineConfig({
     DEV_SERVER: JSON.stringify(isDev),
     BUILD_TIME: JSON.stringify(BUILD_TIME),
   },
+  optimizeDeps: {
+    exclude: ['react'], // 排除 react 和 react-dom 以避免打包
+  },
+  // esbuild: {
+  //   jsxFactory: 'h',
+  //   jsxFragment: 'Fragment',
+  // },
   server: {
     port: 6025,
     host: '0.0.0.0',

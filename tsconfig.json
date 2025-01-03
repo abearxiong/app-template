@@ -16,8 +16,8 @@
     "isolatedModules": true,
     "moduleDetection": "force",
     "noEmit": true,
-    "jsxFragmentFactory": "Fragment",
-    "jsxFactory": "h",
+    // "jsxFragmentFactory": "Fragment",
+    // "jsxFactory": "h",
     "baseUrl": "./",
     "typeRoots": [
       "node_modules/@types",
@@ -37,6 +37,7 @@
   },
   "include": [
     "src",
-    "typings.d.ts"
+    "typings.d.ts",
+    "snippets"
   ]
 }

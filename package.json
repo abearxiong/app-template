@@ -17,15 +17,20 @@
   "type": "module",
   "dependencies": {
     "@kevisual/query": "0.0.7-alpha.3",
+    "@kevisual/system-ui": "^0.0.3",
     "dayjs": "^1.11.13",
-    "lodash-es": "^4.17.21"
+    "lodash-es": "^4.17.21",
+    "react-dom": "^19.0.0",
+    "zustand": "^5.0.2"
   },
   "devDependencies": {
     "@kevisual/router": "0.0.6-alpha-4",
     "@kevisual/store": "0.0.1-alpha.9",
     "@kevisual/types": "^0.0.5",
     "@types/react": "^19.0.2",
+    "@types/react-dom": "^19.0.2",
     "@vitejs/plugin-basic-ssl": "^1.2.0",
+    "@vitejs/plugin-react": "^4.3.4",
     "cross-env": "^7.0.3",
     "react": "^19.0.0",
     "vite": "^6.0.6"

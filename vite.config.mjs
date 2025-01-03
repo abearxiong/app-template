@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite';
 import basicSsl from '@vitejs/plugin-basic-ssl';
+// import react from '@vitejs/plugin-react';
 import dayjs from 'dayjs';
 import path from 'path';
 
@@ -13,8 +14,9 @@ if (!isWebDev) {
   plugins.push(basicSsl());
 }
 
+
 export default defineConfig({
-  plugins: [],
+  plugins: plugins,
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),

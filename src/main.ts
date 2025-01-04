@@ -1,17 +1,9 @@
-import { useContextKey } from '@kevisual/store/config';
-import { Page } from '@kevisual/store/page';
-import { QueryRouterServer } from '@kevisual/router';
+import { page, app } from './app.ts';
 export const render = ({ renderRoot }) => {
   renderRoot.innerHTML = `
     <h1>Hello, World!</h1>
   `;
 };
-
-const page = useContextKey('page', () => {
-  return new Page({
-    basename: '',
-  });
-});
 
 if (page) {
   page.addPage('/app-template', 'home');
@@ -22,10 +14,6 @@ if (page) {
   });
 }
 
-const app = useContextKey('app', () => {
-  console.error('app not found');
-  return null as unknown as QueryRouterServer;
-});
 if (app) {
   app
     .route({
@@ -46,5 +34,6 @@ if (app) {
       render({
         renderRoot,
       });
-    }).addTo(app);
+    })
+    .addTo(app);
 }

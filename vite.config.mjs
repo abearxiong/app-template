@@ -22,6 +22,7 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
+  base: isDev ? '/' : './',
   define: {
     DEV_SERVER: JSON.stringify(isDev),
     BUILD_TIME: JSON.stringify(BUILD_TIME),
@@ -40,12 +41,10 @@ export default defineConfig({
       '/api': {
         target: 'https://kevisual.xiongxiao.me',
         changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api/, '/api'),
       },
-      '/system': {
+      '/system/lib': {
         target: 'https://kevisual.xiongxiao.me',
         changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/system/, '/system'),
       },
     },
   },

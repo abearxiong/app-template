@@ -12,6 +12,9 @@
     "prepub": "envision switchOrg user",
     "pub": "envision deploy ./dist -k app-template -v 0.0.1"
   },
+  "stackblitz": {
+    "startCommand": "npm dev:web"
+  },
   "keywords": [],
   "author": "abearxiong <xiongxiao@xiongxiao.me>",
   "license": "MIT",

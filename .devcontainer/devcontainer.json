@@ -1,0 +1,11 @@
+{
+  "name": "Node.js 22 Development Environment",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:22",
+  "settings": {
+    "terminal.integrated.defaultProfile.linux": "/bin/bash"
+  },
+  "extensions": [
+    "dbaeumer.vscode-eslint"
+  ],
+  "postCreateCommand": "npm install -g @kevisual/envision-cli@latest && npm install"
+}

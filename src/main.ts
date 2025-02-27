@@ -1,9 +1,11 @@
 import { page, app } from './app.ts';
+import { basename } from './modules/basename.ts';
 export const render = ({ renderRoot }) => {
   renderRoot.innerHTML = `
     <h1>Hello, World!</h1>
   `;
 };
+console.log('basename', basename, page, app);
 
 if (page) {
   page.addPage('/app-template', 'home');
@@ -11,6 +13,13 @@ if (page) {
     render({
       renderRoot: document.getElementById('ai-root'),
     });
+  });
+  page.addPage('', 'index');
+  page.subscribe('index', () => {
+    const root = document.getElementById('ai-root') as HTMLElement;
+    root.innerHTML = `
+      <h1>Hello, World!</h1>
+    `;
   });
 }
 
